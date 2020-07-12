@@ -35,7 +35,7 @@ header {
     width: 50%;
 }
 .col-md-9 {
-    width: 75px;
+    width: 75%;
 }
 .header {
     background-color: rgba( 255, 255, 255, 0.75);
@@ -162,7 +162,16 @@ input:focus {
 .hover-li:hover .menu2 {
   display: block;
 }
+.slide {
+    height: 400px;
+    background-color: #235a93;
+}
+.device-type {
+    height: 840px;
+    background-color:#5f93c9;
+}
 .block {
+    margin-bottom: 30px;
     border: 1px solid #ffffff;
 }
 .images {
@@ -213,6 +222,7 @@ input:focus {
     font-weight: bold;
 }
 .price {
+    margin-bottom: 10px;
     text-align: center;
 }
 .price span {
@@ -229,17 +239,36 @@ input:focus {
     font-weight: bold;
     font-size: 21px;
     margin: 7.5px;
-    margin-left: 15px;
+    margin: 15px;
+    
 }
 .button1 {
-    
-    margin: auto;
     background-color: #2c71b8;
     border: 1px solid #ffffff;
+    margin-bottom: 0;
 
 }
 .button2 {
     background-color: rgba(255,255,255,0.2);
     border: none;
 }
-
+.main-text {
+    height: 160px;
+}
+.main-text p, a {
+    color:#6195ca;
+    font-size: 14px;
+}
+.main-text a {
+    text-decoration: none;
+}
+.main-text span {
+   text-decoration: underline;
+}
+.main-text h1 {
+    font-weight: bold;
+    font-size: 48px;
+    color: white;
+    margin-top: 30px;
+}
+ 
