@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Project !!!</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,23 +56,126 @@
             <div class="basket">
             <div class="background-basket"></div>
             </div>
-            <div class="number4">4</div>
+            <div class="number4" id="products-count">0</div>
         </div>
     </div>
     </header>
     <main class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="slide">
-                        Slide
+        <div class="slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="slider-block">
+                            <div>Slide 1</div>
+                             <div>Slide 2</div>
+                            <div>Slide 3</div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            
             <div class="row">
                 <div class="col-md-3">
-                    <div class="device-type">
-                        Device type
+                    <div class="sorting">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="device-type">
+                                            <h1 class="property">DEVICE TYPE</h1>
+                                            <div class="choose-block">
+                                                <input type="checkbox" name="" id="choose-laptop">
+                                                <label for="choose-laptop"></label>
+                                                <label class="string" for="choose-laptop">Laptop</label>
+                                            </div>
+                                            <div class="choose-block">
+                                                <input type="checkbox" name="" id="choose-tablet">
+                                                <label for="choose-tablet"></label>
+                                                <label class="string" for="choose-tablet">Tablet</label>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="color">
+                                        <h1 class="property">Color</h1>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-black">
+                                            <label for="choose-black"></label>
+                                            <label class="string" for="choose-black">Black</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-red">
+                                            <label for="choose-red"></label>
+                                            <label class="string" for="choose-red">Red</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-green">
+                                            <label for="choose-green"></label>
+                                            <label class="string" for="choose-green">Green</label>
+                                        </div>  
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-blue">
+                                            <label for="choose-blue"></label>
+                                            <label class="string" for="choose-blue">Blue</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-orange">
+                                            <label for="choose-orange"></label>
+                                            <label class="string" for="choose-orange">Orange</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ram">
+                                        <h1 class="property">RAM</h1>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-1">
+                                            <label for="choose-1"></label>
+                                            <label class="string" for="choose-1">1GB</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-2">
+                                            <label for="choose-2"></label>
+                                            <label class="string" for="choose-2">2GB</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-4">
+                                            <label for="choose-4"></label>
+                                            <label class="string" for="choose-4">4GB</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-6">
+                                            <label for="choose-6"></label>
+                                            <label class="string" for="choose-6">6GB</label>
+                                        </div>
+                                        <div class="choose-block">
+                                            <input type="checkbox" name="" id="choose-8">
+                                            <label for="choose-8"></label>
+                                            <label class="string" for="choose-8">8GB</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="more-options">
+                                        <a href="">Show more options ...</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="button-submit">
+                                       <button class="button submit">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -104,9 +210,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$599<sup>25</sup></span></p>
-                    
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -117,7 +227,7 @@
                                 <div class="images">
                                     <img class="device" src="images/icon (9).png" alt="">
                                     <a href="" class="option"></a>
-                                    <button class="like"></button>
+                                    <button class="like liked"></button>
                                 </div>
                                 <div class="text">
                                     <h3><span>#1 Device Name</span></h3>
@@ -126,9 +236,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$599<sup>25</sup></span></p>
-                                    
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -148,9 +262,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$599<sup>25</sup></span></p>
-                                
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -173,9 +291,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$1250<sup>99</sup></span></p>
-                                
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -196,9 +318,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$1250<sup>99</sup></span></p>
-                                
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -219,9 +345,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$1250<sup>99</sup></span></p>
-                            
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -244,9 +374,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$399<sup>50</sup></span></p>
-                                
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -267,9 +401,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$399<sup>50</sup></span></p>
-                                
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                         <div class="background-image3"></div>
                                     </button>
                                 </div>
@@ -290,9 +428,13 @@
                                     <p><span>SCREEN SIZE:</span> 7 nches</p>
                                     <p><span>RAM:</span> 1 GB</p>
                                     <p class="price"><span>$399<sup>50</sup></span></p>
-                                
-                                    <button class="button">MORE DETAILS</button>
-                                    <button class="button">ADD TO CART
+                                    <div class="quantity">
+                                        <button class="decrement-button" >-</button>
+                                        <input type="text" class="quantity-input" value="1" readonly>
+                                        <button class="increment-button">+</button>
+                                    </div>
+                                    <button class="button button1">MORE DETAILS</button>
+                                    <button class="button button2">ADD TO CART
                                             <div class=" background-image3"></div>
                                     </button>
                                 </div>
@@ -314,5 +456,25 @@
             </div>
         </div>
     </footer>
+    <div class="modal" >
+        <div class="modal-block">
+            <form action="">
+                <div class="btn-close">X</div>
+                <h3>Please call for more details...</h3>
+                <div class="form-fields">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-fields">
+                    <input type="text" placeholder="Your phone">
+                </div>
+                <button>Please call</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
